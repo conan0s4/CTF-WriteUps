@@ -3,4 +3,5 @@
 This is a writeup from the labs I completed and the CTFs I joined, where I documented my processes and how I approach challenges for <strong>documentation and educational purposes</strong>.
 </p>
 
-![Typing SVG](https://readme-typing-svg.demolab.com?lines=writeup;Documentation;CTF+Player;)
+┌─[kali@conanos4]─[writeups]
+└──╼ $ ls ![Typing SVG](https://readme-typing-svg.demolab.com?lines=writeup;Documentation;CTF+Player;)
