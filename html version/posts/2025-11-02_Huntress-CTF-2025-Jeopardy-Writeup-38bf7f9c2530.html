@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Huntress CTF 2025 Jeopardy Writeup</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Huntress CTF 2025 Jeopardy Writeup</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+1.)Darcy
+</section>
+<section data-field="body" class="e-content">
+<section name="5cd6" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="380a" id="380a" class="graf graf--h3 graf--leading graf--title">Huntress CTF 2025 Jeopardy Writeup</h3><p name="05f3" id="05f3" class="graf graf--p graf-after--h3">1.)Darcy</p><figure name="2caa" id="2caa" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*CFJPlaLtzenks-VpDany1A.png" data-width="774" data-height="479" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*CFJPlaLtzenks-VpDany1A.png"></figure><p name="982b" id="982b" class="graf graf--p graf-after--figure">clue: Darcy</p><p name="6e7b" id="6e7b" class="graf graf--p graf-after--p">While trying multiple solutions, I noticed “Darcs” might be a clue. A quick Google search revealed a site called Darcs, which turned out to be a tool.</p><p name="0ea3" id="0ea3" class="graf graf--p graf-after--p"><a href="https://darcs.net/" data-href="https://darcs.net/" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">https://darcs.net/</a></p><figure name="a337" id="a337" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*ne2VzmvNS_HObhgBboB3BQ.png" data-width="1092" data-height="614" src="https://cdn-images-1.medium.com/max/800/1*ne2VzmvNS_HObhgBboB3BQ.png"></figure><p name="8ff7" id="8ff7" class="graf graf--p graf-after--figure">I opened the terminal, navigated to the Darcs file, and explored the tool. Using <code class="markup--code markup--p-code">darcs --help</code>, I checked the available commands, experimented with a few, and eventually ran <code class="markup--code markup--p-code">darcs log</code>. While reviewing the logs, I discovered the flag.</p><figure name="b95e" id="b95e" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*n_yMKgq3oksG7RM3U424uQ.png" data-width="1353" data-height="585" src="https://cdn-images-1.medium.com/max/800/1*n_yMKgq3oksG7RM3U424uQ.png"></figure><figure name="7c8d" id="7c8d" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*smf1nVmrrYB7C6LRzqeW8g.png" data-width="1092" data-height="614" src="https://cdn-images-1.medium.com/max/800/1*smf1nVmrrYB7C6LRzqeW8g.png"></figure><figure name="b339" id="b339" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*KDMvKbbI-8Ht9w7cgSCgUg.png" data-width="1230" data-height="631" src="https://cdn-images-1.medium.com/max/800/1*KDMvKbbI-8Ht9w7cgSCgUg.png"></figure><p name="bf41" id="bf41" class="graf graf--p graf-after--figure">2.)QRception</p><p name="3e3a" id="3e3a" class="graf graf--p graf-after--p">For this challenge, I used the <a href="https://zxing.org/w/decode.jspx" data-href="https://zxing.org/w/decode.jspx" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">ZXing Decoder Online</a> tool to decode the content.</p><figure name="b192" id="b192" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*nBTMLqUtqai9C96QDOl0kQ.png" data-width="811" data-height="209" src="https://cdn-images-1.medium.com/max/800/1*nBTMLqUtqai9C96QDOl0kQ.png"></figure><figure name="1609" id="1609" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*Ej5qBB2MLzFwMkeuPnpfCg.png" data-width="760" data-height="270" src="https://cdn-images-1.medium.com/max/800/1*Ej5qBB2MLzFwMkeuPnpfCg.png"></figure><figure name="c6f5" id="c6f5" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*eBuP8jzzKPZ8nRw_yPrGtg.png" data-width="495" data-height="495" src="https://cdn-images-1.medium.com/max/800/1*eBuP8jzzKPZ8nRw_yPrGtg.png"></figure><figure name="e1b4" id="e1b4" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*J4rIOIzaqyEUpKlriT1AAQ.png" data-width="1366" data-height="689" src="https://cdn-images-1.medium.com/max/800/1*J4rIOIzaqyEUpKlriT1AAQ.png"></figure><p name="0490" id="0490" class="graf graf--p graf-after--figure">3.) Tabby’s Date</p><p name="c309" id="c309" class="graf graf--p graf-after--p">For this challenge, I used the <code class="markup--code markup--p-code">tree</code> command to see the directory structure and noticed a bunch of <code class="markup--code markup--p-code">.bin</code> files. I navigated to them and examined their contents using tools like <code class="markup--code markup--p-code">strings</code>, <code class="markup--code markup--p-code">cat</code>, and <code class="markup--code markup--p-code">binwalk</code> to search for the flag. Eventually, I opened the files in a hex editor, which made them much more readable, and that’s how I finally found the flag.</p><figure name="8926" id="8926" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*ar95lGaymEhq-BHx4GZ92w.png" data-width="919" data-height="514" src="https://cdn-images-1.medium.com/max/800/1*ar95lGaymEhq-BHx4GZ92w.png"></figure><figure name="da20" id="da20" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*wqkUUBVteQXH2-SPrFcXRQ.png" data-width="942" data-height="236" src="https://cdn-images-1.medium.com/max/800/1*wqkUUBVteQXH2-SPrFcXRQ.png"></figure><figure name="55b9" id="55b9" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*Oq23NJhQjA7dULSI-VpWLg.png" data-width="1361" data-height="637" src="https://cdn-images-1.medium.com/max/800/1*Oq23NJhQjA7dULSI-VpWLg.png"></figure><figure name="e3f9" id="e3f9" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*7KbkExHSCbOABwB1LsrdWw.png" data-width="1366" data-height="618" src="https://cdn-images-1.medium.com/max/800/1*7KbkExHSCbOABwB1LsrdWw.png"></figure><p name="cf63" id="cf63" class="graf graf--p graf-after--figure">4.)RFC 9309</p><p name="2e7c" id="2e7c" class="graf graf--p graf-after--p">Did a quick Google search on <strong class="markup--strong markup--p-strong">RFC 9309</strong> and found it refers to <strong class="markup--strong markup--p-strong">/robots.txt</strong>, which defines rules for web crawlers. I then checked the website’s <strong class="markup--strong markup--p-strong">/robots.txt</strong> file, noticed an interesting line, inspected it using the browser’s developer tools, and found the flag.</p><figure name="73b7" id="73b7" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*5sOeZaVP-mMbS-Z5Q7lcvg.png" data-width="823" data-height="472" src="https://cdn-images-1.medium.com/max/800/1*5sOeZaVP-mMbS-Z5Q7lcvg.png"></figure><figure name="9486" id="9486" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*7XNak-vBGhqKHWq6LVokBA.png" data-width="1357" data-height="357" src="https://cdn-images-1.medium.com/max/800/1*7XNak-vBGhqKHWq6LVokBA.png"></figure><figure name="9840" id="9840" class="graf graf--figure graf-after--figure graf--trailing"><img class="graf-image" data-image-id="1*elcgOl34eN8XbM6NA1dBfQ.png" data-width="1364" data-height="602" src="https://cdn-images-1.medium.com/max/800/1*elcgOl34eN8XbM6NA1dBfQ.png"></figure></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@conan0s4" class="p-author h-card">Alexander Sapo</a> on <a href="https://medium.com/p/38bf7f9c2530"><time class="dt-published" datetime="2025-11-02T03:02:09.728Z">November 2, 2025</time></a>.</p><p><a href="https://medium.com/@conan0s4/huntress-ctf-2025-jeopardy-writeup-38bf7f9c2530" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on February 7, 2026.</p></footer></article></body></html>

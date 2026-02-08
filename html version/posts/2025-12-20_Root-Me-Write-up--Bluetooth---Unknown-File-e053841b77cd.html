@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Root-Me Write-up: Bluetooth — Unknown File</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Root-Me Write-up: Bluetooth — Unknown File</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Challenge Statement
+</section>
+<section data-field="body" class="e-content">
+<section name="92ee" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="f531" id="f531" class="graf graf--h3 graf--leading graf--title">Root-Me Write-up: Bluetooth — Unknown File</h3><figure name="3c18" id="3c18" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*P7yBL-TxdHbp8YTOuw2ksQ.png" data-width="1100" data-height="380" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*P7yBL-TxdHbp8YTOuw2ksQ.png"></figure><h3 name="5df1" id="5df1" class="graf graf--h3 graf-after--figure">Challenge Statement</h3><p name="22ff" id="22ff" class="graf graf--p graf-after--h3">A friend working at the NSA recovered an <strong class="markup--strong markup--p-strong">unreadable file</strong> from a hacker’s computer. The only information available is that the file originates from a <strong class="markup--strong markup--p-strong">communication between a computer and a phone</strong>.</p><p name="c327" id="c327" class="graf graf--p graf-after--p">The objective is to find:</p><blockquote name="14eb" id="14eb" class="graf graf--blockquote graf-after--p"><strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">The SHA‑1 hash of the concatenation of the MAC address (uppercase) and the phone name</em></strong><em class="markup--em markup--blockquote-em">.</em></blockquote><p name="29b1" id="29b1" class="graf graf--p graf-after--blockquote graf--trailing"><strong class="markup--strong markup--p-strong">Hint:</strong> Bluetooth — Unknown file</p></div></div></section><section name="6bff" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="7295" id="7295" class="graf graf--h3 graf--leading">Initial Analysis</h3><p name="d5be" id="d5be" class="graf graf--p graf-after--h3">The first step was to identify the file type.</p><figure name="a582" id="a582" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*QHIYNSd8hPo_sduTGBMcog.png" data-width="476" data-height="209" src="https://cdn-images-1.medium.com/max/800/1*QHIYNSd8hPo_sduTGBMcog.png"></figure><h3 name="265a" id="265a" class="graf graf--h3 graf-after--figure">File Identification</h3><p name="70e9" id="70e9" class="graf graf--p graf-after--h3">I started by running the <code class="markup--code markup--p-code">file</code> command on the provided file to determine its format. Since the output was not immediately clear, I opened the file using a <strong class="markup--strong markup--p-strong">hex editor</strong> to manually inspect the <strong class="markup--strong markup--p-strong">file header and footer</strong>.</p><p name="360f" id="360f" class="graf graf--p graf-after--p">From the header, a clear signature appeared indicating:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="typescript" name="0ec8" id="0ec8" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-title class_">BTSnoop</span></span></pre><figure name="907a" id="907a" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*IO2kngwI9dPVNQ6dZZOwig.png" data-width="835" data-height="277" src="https://cdn-images-1.medium.com/max/800/1*IO2kngwI9dPVNQ6dZZOwig.png"></figure><figure name="a1a4" id="a1a4" class="graf graf--figure graf-after--figure graf--trailing"><img class="graf-image" data-image-id="1*JJ-OMr7vLMf-F1tOiGPTFQ.png" data-width="807" data-height="331" src="https://cdn-images-1.medium.com/max/800/1*JJ-OMr7vLMf-F1tOiGPTFQ.png"></figure></div></div></section><section name="ae14" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="84b1" id="84b1" class="graf graf--h3 graf--leading">What is a BTSnoop File?</h3><p name="9a90" id="9a90" class="graf graf--p graf-after--h3">A <strong class="markup--strong markup--p-strong">BTSnoop file</strong> is a Bluetooth packet capture format used to log <strong class="markup--strong markup--p-strong">Bluetooth HCI (Host Controller Interface) traffic</strong>. These files are commonly generated when debugging Bluetooth communications and can be analyzed using network forensic tools such as <strong class="markup--strong markup--p-strong">Wireshark</strong>.</p><p name="6148" id="6148" class="graf graf--p graf-after--p graf--trailing">This confirmed that the recovered file was a <strong class="markup--strong markup--p-strong">Bluetooth traffic capture</strong>.</p></div></div></section><section name="1131" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="3e77" id="3e77" class="graf graf--h3 graf--leading">Traffic Analysis with Wireshark</h3><p name="95ba" id="95ba" class="graf graf--p graf-after--h3">With this information, I opened the file directly in <strong class="markup--strong markup--p-strong">Wireshark</strong>, which has built‑in support for BTSnoop logs.</p><figure name="6c71" id="6c71" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*1-WUhttAP9tbSrFm-EXwoQ.png" data-width="1360" data-height="543" src="https://cdn-images-1.medium.com/max/800/1*1-WUhttAP9tbSrFm-EXwoQ.png"></figure><p name="f5b2" id="f5b2" class="graf graf--p graf-after--figure">Once loaded:</p><ul class="postList"><li name="baca" id="baca" class="graf graf--li graf-after--p">The Bluetooth packets and events were displayed correctly</li><li name="cebd" id="cebd" class="graf graf--li graf-after--li">Individual packets could be inspected</li></ul><figure name="2dab" id="2dab" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*GO99m1dTEdIlKjF9q36viQ.png" data-width="1007" data-height="592" src="https://cdn-images-1.medium.com/max/800/1*GO99m1dTEdIlKjF9q36viQ.png"></figure><p name="5bb9" id="5bb9" class="graf graf--p graf-after--figure">To extract the required information, I navigated to:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="typescript" name="d2eb" id="d2eb" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-title class_">Wireless</span> → <span class="hljs-title class_">Bluetooth</span> <span class="hljs-title class_">Devices</span></span></pre><p name="0fea" id="0fea" class="graf graf--p graf-after--pre">This panel lists all discovered Bluetooth devices along with:</p><ul class="postList"><li name="95c7" id="95c7" class="graf graf--li graf-after--p">MAC address (BD_ADDR)</li><li name="a651" id="a651" class="graf graf--li graf-after--li">Device name</li></ul><figure name="d8d5" id="d8d5" class="graf graf--figure graf-after--li graf--trailing"><img class="graf-image" data-image-id="1*oLvzBx686odguA1MwUc1rw.png" data-width="1361" data-height="540" src="https://cdn-images-1.medium.com/max/800/1*oLvzBx686odguA1MwUc1rw.png"></figure></div></div></section><section name="39dc" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="9e31" id="9e31" class="graf graf--h3 graf--leading">Extracted Information</h3><p name="6a1c" id="6a1c" class="graf graf--p graf-after--h3">From the Bluetooth Devices list, the following values were identified:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="yaml" name="7787" id="7787" class="graf graf--pre graf-after--p graf--trailing graf--preV2"><span class="pre--content"><span class="hljs-attr">BD_ADDR:</span> <span class="hljs-string">0c:b3:19:b9:4f:c6</span><br /><span class="hljs-attr">Device Name:</span> <span class="hljs-string">GT-S7390G</span></span></pre></div></div></section><section name="368c" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="d4b3" id="d4b3" class="graf graf--h3 graf--leading">Flag Construction</h3><p name="53fd" id="53fd" class="graf graf--p graf-after--h3">The challenge specifies that the flag is generated as:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="scss" name="66fc" id="66fc" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-built_in">SHA1</span>( MAC_ADDRESS_UPPERCASE + DEVICE_NAME )</span></pre><h3 name="7b14" id="7b14" class="graf graf--h3 graf-after--pre">Step 1: Uppercase the MAC Address</h3><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="makefile" name="17ba" id="17ba" class="graf graf--pre graf-after--h3 graf--preV2"><span class="pre--content"><span class="hljs-section">0C:B3:19:B9:4F:C6</span></span></pre><h3 name="f5af" id="f5af" class="graf graf--h3 graf-after--pre">Step 2: Concatenate with the Device Name</h3><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="makefile" name="3ab4" id="3ab4" class="graf graf--pre graf-after--h3 graf--preV2"><span class="pre--content"><span class="hljs-section">0C:B3:19:B9:4F:C6GT-S7390G</span></span></pre><h3 name="ae98" id="ae98" class="graf graf--h3 graf-after--pre">Step 3: Generate SHA‑1 Hash</h3><p name="62fa" id="62fa" class="graf graf--p graf-after--h3">The concatenated string was hashed using a SHA‑1 generator.</p><p name="863f" id="863f" class="graf graf--p graf-after--p"><a href="https://www.bairesdev.com/tools/onlinedevtools/generate-hash/sha1/" data-href="https://www.bairesdev.com/tools/onlinedevtools/generate-hash/sha1/" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">https://www.bairesdev.com/tools/onlinedevtools/generate-hash/sha1/</a></p><figure name="e931" id="e931" class="graf graf--figure graf-after--p graf--trailing"><img class="graf-image" data-image-id="1*bGmxFyWAVbzFVIuXuAb2Uw.png" data-width="822" data-height="633" src="https://cdn-images-1.medium.com/max/800/1*bGmxFyWAVbzFVIuXuAb2Uw.png"></figure></div></div></section><section name="f530" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="4674" id="4674" class="graf graf--h3 graf--leading">Final Flag</h3><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="less" name="1ca9" id="1ca9" class="graf graf--pre graf-after--h3 graf--trailing graf--preV2"><span class="pre--content"><span class="hljs-selector-tag">SHA1</span>(<span class="hljs-number">0</span><span class="hljs-attribute">C</span>:<span class="hljs-attribute">B3</span>:<span class="hljs-number">19</span>:<span class="hljs-attribute">B9</span>:<span class="hljs-number">4</span><span class="hljs-attribute">F</span>:C6GT-S7390G)</span></pre></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@conan0s4" class="p-author h-card">Alexander Sapo</a> on <a href="https://medium.com/p/e053841b77cd"><time class="dt-published" datetime="2025-12-20T01:18:55.553Z">December 20, 2025</time></a>.</p><p><a href="https://medium.com/@conan0s4/root-me-write-up-bluetooth-unknown-file-e053841b77cd" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on February 7, 2026.</p></footer></article></body></html>

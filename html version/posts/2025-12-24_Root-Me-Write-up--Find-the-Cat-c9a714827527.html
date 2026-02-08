@@ -1,0 +1,73 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Root-Me Write-up: Find the Cat</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Root-Me Write-up: Find the Cat</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Statement
+The president’s cat was kidnapped by separatists. A suspect carrying a USB key has been arrested. Berthier, once again you have…
+</section>
+<section data-field="body" class="e-content">
+<section name="d319" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="25e4" id="25e4" class="graf graf--h3 graf--leading graf--title">Root-Me Write-up: Find the Cat</h3><figure name="9706" id="9706" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*hZf1IUIc5N-6JR56nAqFHw.png" data-width="1365" data-height="527" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*hZf1IUIc5N-6JR56nAqFHw.png"></figure><p name="f2df" id="f2df" class="graf graf--p graf-after--figure">Statement<br>The president’s cat was kidnapped by separatists. A suspect carrying a USB key has been arrested. Berthier, once again you have to save the Republic! Analyze this key and find out in which city the cat is retained!</p><p name="deaa" id="deaa" class="graf graf--p graf-after--p">The md5sum of the archive is edf2f1aaef605c308561888079e7f7f7. Input the city name in lowercase.</p><h3 name="dcff" id="dcff" class="graf graf--h3 graf-after--p">Initial Analysis</h3><p name="960b" id="960b" class="graf graf--p graf-after--h3">I began with checking the file using common commands such as <code class="markup--code markup--p-code">file, cat , and strings</code>. This helped confirm that the evidence was a USB image and gave an initial idea of what type of data I was dealing with.</p><p name="1c94" id="1c94" class="graf graf--p graf-after--p graf--trailing">After that, I researched what a USB key is typically used for and correlated this with the file information obtained earlier. Based on this, I decided that mounting the USB image would be a reasonable first step.</p></div></div></section><section name="deba" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="a1fa" id="a1fa" class="graf graf--h3 graf--leading">Mounting the USB Image</h3><p name="9e1e" id="9e1e" class="graf graf--p graf-after--h3">I used <strong class="markup--strong markup--p-strong">FTK Imager</strong> to mount the USB image. After mounting it, three folders were visible. I browsed through them, looking for anything that could resemble a flag or location-related clue.</p><p name="4652" id="4652" class="graf graf--p graf-after--p">At this stage, nothing immediately stood out as a direct answer.</p><figure name="77fb" id="77fb" class="graf graf--figure graf-after--p graf--trailing"><img class="graf-image" data-image-id="1*vcKhSMaoi3UvMfnM9KO0aw.png" data-width="1365" data-height="708" src="https://cdn-images-1.medium.com/max/800/1*vcKhSMaoi3UvMfnM9KO0aw.png"></figure></div></div></section><section name="d917" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="ddf1" id="ddf1" class="graf graf--p graf--leading">During analysis, several documents and files were found . One titled <strong class="markup--strong markup--p-strong">“Alsace”</strong> contained references to hotels, camping locations, and tourist offices. Additional documents related to Alsace were also present, including administrative documents such as <em class="markup--em markup--p-em">“CREATING YOUR ASSOCIATION — HOW IT WORKS.”</em></p><p name="693f" id="693f" class="graf graf--p graf-after--p">What stood out most was an <code class="markup--code markup--p-code"><strong class="markup--strong markup--p-strong">.odt</strong></code><strong class="markup--strong markup--p-strong"> file titled “data sanitization tutorial.”</strong> This strongly implied that data may have been intentionally removed or hidden.</p><figure name="657e" id="657e" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*obUXdOS01flsydWpsc_LoA.png" data-width="1365" data-height="339" src="https://cdn-images-1.medium.com/max/800/1*obUXdOS01flsydWpsc_LoA.png"></figure><figure name="2d92" id="2d92" class="graf graf--figure graf-after--figure graf--trailing"><img class="graf-image" data-image-id="1*GCkJ9JsM738W72DsRh2brg.png" data-width="871" data-height="322" src="https://cdn-images-1.medium.com/max/800/1*GCkJ9JsM738W72DsRh2brg.png"></figure></div></div></section><section name="8652" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="7ae5" id="7ae5" class="graf graf--p graf--leading">Since mounting the USB did not reveal anything conclusive, I changed my approach.</p><p name="d03a" id="d03a" class="graf graf--p graf-after--p">Instead of mounting the image, I reopened <strong class="markup--strong markup--p-strong">FTK Imager</strong> and added the USB image as an <strong class="markup--strong markup--p-strong">evidence item</strong>:</p><ul class="postList"><li name="4364" id="4364" class="graf graf--li graf-after--p">Selected <em class="markup--em markup--li-em">Add Evidence Item</em></li></ul><figure name="2dbc" id="2dbc" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*g4Sjo-SEPxSktb68wrix2w.png" data-width="1366" data-height="706" src="https://cdn-images-1.medium.com/max/800/1*g4Sjo-SEPxSktb68wrix2w.png"></figure><ul class="postList"><li name="c746" id="c746" class="graf graf--li graf-after--figure">Choose <em class="markup--em markup--li-em">Image File</em></li></ul><figure name="b4a1" id="b4a1" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*KHJKAc3lJ2OpcepPULWzRg.png" data-width="1365" data-height="715" src="https://cdn-images-1.medium.com/max/800/1*KHJKAc3lJ2OpcepPULWzRg.png"></figure><ul class="postList"><li name="b382" id="b382" class="graf graf--li graf-after--figure">Selected <code class="markup--code markup--li-code">ch9</code> (the USB image)</li></ul><figure name="ec69" id="ec69" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*fgfAohMnQitVZ5okoeHjJQ.png" data-width="947" data-height="462" src="https://cdn-images-1.medium.com/max/800/1*fgfAohMnQitVZ5okoeHjJQ.png"></figure><p name="ada2" id="ada2" class="graf graf--p graf-after--figure">After expanding the file system view, I found a <strong class="markup--strong markup--p-strong">deleted file</strong> named:</p><p name="d8dd" id="d8dd" class="graf graf--p graf-after--p"><code class="markup--code markup--p-code">revendication.odt</code></p><p name="2e0e" id="2e0e" class="graf graf--p graf-after--p">I extracted this file for further analysis.</p><figure name="fbd1" id="fbd1" class="graf graf--figure graf-after--p graf--trailing"><img class="graf-image" data-image-id="1*kRHxkf8xT7fFpAKn9xXlHA.png" data-width="1366" data-height="706" src="https://cdn-images-1.medium.com/max/800/1*kRHxkf8xT7fFpAKn9xXlHA.png"></figure></div></div></section><section name="2ce8" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="4054" id="4054" class="graf graf--h3 graf--leading">Extracting and Viewing the Deleted Document</h3><p name="f4f0" id="f4f0" class="graf graf--p graf-after--h3">To view the contents of the extracted <code class="markup--code markup--p-code">.odt</code> file, I used the following tool:</p><ul class="postList"><li name="e594" id="e594" class="graf graf--li graf-after--p"><a href="https://products.groupdocs.app/viewer/total" data-href="https://products.groupdocs.app/viewer/total" class="markup--anchor markup--li-anchor" rel="noopener" target="_blank">https://products.groupdocs.app/viewer/total</a></li></ul><figure name="e21b" id="e21b" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*UiKelKVjn4R52y6e4D2doQ.png" data-width="1365" data-height="633" src="https://cdn-images-1.medium.com/max/800/1*UiKelKVjn4R52y6e4D2doQ.png"></figure><figure name="4f3c" id="4f3c" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*OzvVtdzA1SXqflLPBY6EkA.png" data-width="1364" data-height="598" src="https://cdn-images-1.medium.com/max/800/1*OzvVtdzA1SXqflLPBY6EkA.png"></figure><p name="c5e2" id="c5e2" class="graf graf--p graf-after--figure">Inside the document, I found:</p><ul class="postList"><li name="bbd2" id="bbd2" class="graf graf--li graf-after--p">An image of a cat</li></ul><p name="15f6" id="15f6" class="graf graf--p graf-after--li">The following text:</p><blockquote name="928e" id="928e" class="graf graf--blockquote graf-after--p"><strong class="markup--strong markup--blockquote-strong"><em class="markup--em markup--blockquote-em">RENDEZ L’AUTONOMIE À L’ALSACE<br> SINON NOUS TUERONS LE CHAT!!!</em></strong></blockquote><p name="e508" id="e508" class="graf graf--p graf-after--blockquote"><strong class="markup--strong markup--p-strong">Translation:</strong><br> “Give Alsace back its autonomy or we will kill the cat!!!”</p><p name="3ed7" id="3ed7" class="graf graf--p graf-after--p graf--trailing">This confirmed the motive and region but still did not directly provide the city name.</p></div></div></section><section name="ffe2" class="section section--body"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="dfdc" id="dfdc" class="graf graf--h3 graf--leading">Metadata Analysis</h3><p name="ad84" id="ad84" class="graf graf--p graf-after--h3">Since the message alone was not the flag, I decided to extract the image from the <code class="markup--code markup--p-code">.odt</code> file and analyze its metadata.</p><p name="d3a8" id="d3a8" class="graf graf--p graf-after--p">Using <strong class="markup--strong markup--p-strong">7-Zip</strong>, I extracted the contents of the <code class="markup--code markup--p-code">.odt</code> file. After checking the image properties, I found embedded <strong class="markup--strong markup--p-strong">GPS coordinates (latitude and longitude)</strong>.</p><figure name="bc6a" id="bc6a" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*fX2VU6d9M48JAL_BF0G8xg.png" data-width="784" data-height="560" src="https://cdn-images-1.medium.com/max/800/1*fX2VU6d9M48JAL_BF0G8xg.png"></figure><figure name="6193" id="6193" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*8iZ0TbupQFkBzQGriYXzcA.png" data-width="1141" data-height="554" src="https://cdn-images-1.medium.com/max/800/1*8iZ0TbupQFkBzQGriYXzcA.png"></figure><p name="b62f" id="b62f" class="graf graf--p graf-after--figure">To interpret the metadata, I used: <a href="https://jimpl.com/" data-href="https://jimpl.com/" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">https://jimpl.com/</a></p><p name="d848" id="d848" class="graf graf--p graf-after--p">The coordinates resolved to the city:</p><figure name="5c50" id="5c50" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*YB8Saa1qHNfolje2AR7Uhw.png" data-width="1353" data-height="578" src="https://cdn-images-1.medium.com/max/800/1*YB8Saa1qHNfolje2AR7Uhw.png"></figure><p name="841f" id="841f" class="graf graf--p graf-after--figure graf--trailing"><strong class="markup--strong markup--p-strong">Helfrantzkirch</strong></p></div></div></section><section name="2179" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="9169" id="9169" class="graf graf--h3 graf--leading">Final Answer</h3><p name="9350" id="9350" class="graf graf--p graf-after--h3 graf--trailing"><strong class="markup--strong markup--p-strong">Flag:</strong> <code class="markup--code markup--p-code">helfrantzkirch</code></p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@conan0s4" class="p-author h-card">Alexander Sapo</a> on <a href="https://medium.com/p/c9a714827527"><time class="dt-published" datetime="2025-12-24T13:55:46.702Z">December 24, 2025</time></a>.</p><p><a href="https://medium.com/@conan0s4/root-me-write-up-find-the-cat-c9a714827527" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on February 7, 2026.</p></footer></article></body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Root-Me: Deleted File Challenge Solution</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Root-Me: Deleted File Challenge Solution</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Category: Forensics
+</section>
+<section data-field="body" class="e-content">
+<section name="3cdc" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="b963" id="b963" class="graf graf--h3 graf--leading graf--title">Root-Me: Deleted File Challenge Solution</h3><h4 name="6084" id="6084" class="graf graf--h4 graf-after--h3 graf--subtitle">Category: Forensics</h4><figure name="6836" id="6836" class="graf graf--figure graf-after--h4"><img class="graf-image" data-image-id="1*WbVyAbHzNCecR-gKLB7q-w.png" data-width="1096" data-height="418" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*WbVyAbHzNCecR-gKLB7q-w.png"></figure><h3 name="a255" id="a255" class="graf graf--h3 graf-after--figure">How I found the flag</h3><p name="9106" id="9106" class="graf graf--p graf-after--h3">The evidence was a <code class="markup--code markup--p-code">.image</code> file, so I opened it using <strong class="markup--strong markup--p-strong">FTK Imager</strong>.</p></div><div class="section-inner sectionLayout--outsetColumn"><figure name="f76b" id="f76b" class="graf graf--figure graf--layoutOutsetCenter graf-after--p"><img class="graf-image" data-image-id="1*9cuTo09ONSIwdRvCAO9i1w.png" data-width="1362" data-height="734" src="https://cdn-images-1.medium.com/max/1200/1*9cuTo09ONSIwdRvCAO9i1w.png"></figure></div><div class="section-inner sectionLayout--insetColumn"><p name="aab4" id="aab4" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">Add Evidence Item</strong> → choose <em class="markup--em markup--p-em">Image File</em> → load <code class="markup--code markup--p-code">usb.image</code>.</p><p name="c783" id="c783" class="graf graf--p graf-after--p">FTK displayed the available partitions and file systems, including unallocated space.</p><p name="7964" id="7964" class="graf graf--p graf-after--p">Inside the root directory, there was only one file: <strong class="markup--strong markup--p-strong">anonyme.png</strong>, an image of a tree.</p><figure name="ef5c" id="ef5c" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*wMhvA0CCPmx21e1iarpbSw.png" data-width="400" data-height="300" src="https://cdn-images-1.medium.com/max/800/1*wMhvA0CCPmx21e1iarpbSw.png"></figure><p name="92e2" id="92e2" class="graf graf--p graf-after--figure">Since it was the only file, I figured the metadata might be the key.</p></div><div class="section-inner sectionLayout--outsetRow" data-paragraph-count="2"><figure name="7090" id="7090" class="graf graf--figure graf--layoutOutsetRow is-partialWidth graf-after--p" style="width: 55.772%;"><img class="graf-image" data-image-id="1*Dl_ErMiwfXMR0zN69dZ2ZA.png" data-width="1314" data-height="580" src="https://cdn-images-1.medium.com/max/800/1*Dl_ErMiwfXMR0zN69dZ2ZA.png"></figure><figure name="e955" id="e955" class="graf graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 44.228%;"><img class="graf-image" data-image-id="1*5Eaw4evZSYdsp0VoC2hN9Q.png" data-width="1060" data-height="590" src="https://cdn-images-1.medium.com/max/600/1*5Eaw4evZSYdsp0VoC2hN9Q.png"></figure></div><div class="section-inner sectionLayout--insetColumn"><p name="31de" id="31de" class="graf graf--p graf-after--figure">I extracted the PNG and ran <strong class="markup--strong markup--p-strong">exiftool</strong> on it — and found the creator’s name.</p><p name="0ab7" id="0ab7" class="graf graf--p graf-after--p">Then I tested different flag formats until I found the exact one the challenge required.</p><ul class="postList"><li name="d5f6" id="d5f6" class="graf graf--li graf-after--p">Javier_Turcot</li><li name="0b34" id="0b34" class="graf graf--li graf-after--li">Turcot_Javier</li><li name="886d" id="886d" class="graf graf--li graf-after--li">Turcot Javier</li><li name="bcee" id="bcee" class="graf graf--li graf-after--li">Javier Turcot</li><li name="559b" id="559b" class="graf graf--li graf-after--li">javier turcot</li></ul><p name="98e2" id="98e2" class="graf graf--p graf-after--li">I verified it using another metadata viewer, which confirmed the same information.</p><p name="28de" id="28de" class="graf graf--p graf-after--p graf--trailing">I also used jimpl.com to check the file’s metadata.<br> <strong class="markup--strong markup--p-strong">Correct flag:</strong> <code class="markup--code markup--p-code">javier_turcot</code><br> It took a few attempts since the challenge was case-sensitive and very specific.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@conan0s4" class="p-author h-card">Alexander Sapo</a> on <a href="https://medium.com/p/ac8d8d7af28a"><time class="dt-published" datetime="2025-11-14T03:08:23.236Z">November 14, 2025</time></a>.</p><p><a href="https://medium.com/@conan0s4/root-me-deleted-file-challenge-solution-ac8d8d7af28a" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on February 7, 2026.</p></footer></article></body></html>
