@@ -1,6 +1,6 @@
 
 <h1 align="center" style="font-size: 80px;">CONAN0S4 WRITEUP</h1>
-<h2 align="center" style="font-size: 20px;">![Typing SVG](https://readme-typing-svg.demolab.com?lines=writeup;Documentation;CTF+Player;) </h2>
 <p align="center">
+![Typing SVG](https://readme-typing-svg.demolab.com?lines=writeup;Documentation;CTF+Player;)
 This is a writeup from the labs I completed and the CTFs I joined, where I documented my processes and how I approach challenges for <strong>documentation and educational purposes</strong>.
 </p>
