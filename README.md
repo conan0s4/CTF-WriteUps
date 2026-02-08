@@ -9,5 +9,4 @@ This is a writeup from the labs I completed and the CTFs I joined, where I docum
 └──╼$ ls
 README.md  labs/  CTFs/  tools/
 </pre>
-<img src="https://readme-typing-svg.demolab.com?lines=writeup;Documentation;CTF+Player;" alt="Typing SVG">
 </div>
