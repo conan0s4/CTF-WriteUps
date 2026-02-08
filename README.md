@@ -9,5 +9,5 @@ This is a writeup from the labs I completed and the CTFs I joined, where I docum
 └──╼$ ls
 README.md  labs/  CTFs/  tools/
 </pre>
-Note: If the writeup appears incomplete or some sections are missing, you can download and open the HTML file to view the full content.
+Note: If the write-up appears incomplete or has missing sections, please refer to the original HTML copies in html_version/posts.
 </div>
