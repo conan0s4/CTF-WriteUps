@@ -1,5 +1,7 @@
 ![Typing SVG](https://readme-typing-svg.demolab.com?lines=writeup;Documentation;CTF+Player;)
 
-# CONANOS4 WRITEUP
+<h1 align="center" style="font-size: 80px;">CONANOS4 WRITEUP</h1>
 
-A comprehensive documentation or writeup written by me, covering my labs and the CTFs I have joined. This is for **documentation and educational purposes**, and also to **showcase my process**.
+<p align="center">
+This is a writeup from the labs I completed and the CTFs I joined, where I documented my processes and how I approach challenges for <strong>documentation and educational purposes</strong>.
+</p>
