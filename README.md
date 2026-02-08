@@ -3,6 +3,11 @@
 This is a writeup from the labs I completed and the CTFs I joined, where I documented my processes and how I approach challenges for <strong>documentation and educational purposes</strong>.
 </p>
 
+<div style="background-color:#1e1e1e; color:#00ff00; padding:20px; font-family:monospace; border-radius:8px;">
+<pre>
 ┌─[kali@conanos4]─[writeups]
-└──╼ 
-$ ls ![Typing SVG](https://readme-typing-svg.demolab.com?lines=writeup;Documentation;CTF+Player;)
+└──╼$ ls
+README.md  labs/  CTFs/  tools/
+</pre>
+<img src="https://readme-typing-svg.demolab.com?lines=writeup;Documentation;CTF+Player;" alt="Typing SVG">
+</div>
