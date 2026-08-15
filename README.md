@@ -5,98 +5,87 @@
 </p>
 
 <p align="center">
-A collection of cybersecurity and technical writeups covering CTFs, security labs, offensive and defensive security, tools, experiments, and other technologies I have worked with.
+A collection of cybersecurity and technical writeups documenting the labs I completed, CTFs I joined, projects I worked on, and technologies I explored.
 </p>
 
 <div style="background-color:#1e1e1e; color:#00ff00; padding:20px; font-family:monospace; border-radius:8px;">
 <pre>
 ┌─[kali@conanos4]─[~/writeups]
-└──╼$ tree -L 1
+└──╼$ ls
 
-.
-├── CTFs/
-├── labs/
-├── tools/
-├── tech/
-├── html_version/
-└── README.md
+IT Lab Writeups/
+Penetration Testing Project/
+html version/
+writeups/
+README.md
+.gitattributes </pre>
 
-└── "document the process, not just the result." </pre>
-
+<small>
+Note: If a write-up appears incomplete or has missing sections, please refer to the corresponding original HTML copy in <code>html version</code>.
+</small>
 </div>
 
-## What You'll Find Here
+## What's Inside
 
-This repository is a personal collection of things I have **learned, built, tested, investigated, and documented**.
+This repository is a collection of work from different areas of cybersecurity and technology.
 
-| Directory       | Description                                                                          |
-| --------------- | ------------------------------------------------------------------------------------ |
-| `CTFs/`         | Challenge writeups, solutions, techniques, and problem-solving approaches            |
-| `labs/`         | Hands-on security labs, experiments, and technical investigations                    |
-| `tools/`        | Notes, usage, testing, and practical exploration of security tools                   |
-| `tech/`         | Documentation and experiments involving different technologies and development tools |
-| `html_version/` | Visual HTML versions of selected writeups                                            |
+It includes practical labs, CTF writeups, penetration testing work, technical documentation, and other hands-on experiments.
+
+### IT Lab Writeups
+
+Documentation from IT and cybersecurity labs, including the process, findings, and lessons learned from practical exercises.
+
+### Penetration Testing Project
+
+Documentation related to a penetration testing project, including the methodology, testing process, findings, and results.
+
+### Writeups
+
+A collection of writeups covering different challenges, experiments, and areas of cybersecurity and technology.
+
+### HTML Version
+
+Visual HTML versions of selected writeups.
 
 ## Areas Covered
 
-The content here is intentionally broad rather than limited to a single cybersecurity discipline.
+The repository isn't focused on only one side of cybersecurity.
 
-**Offensive Security**
-Web security, reconnaissance, exploitation, privilege escalation, and other offensive techniques explored through authorized labs and CTFs.
+Depending on the project or writeup, the content may cover:
 
-**Defensive Security**
-Log analysis, detection, network analysis, investigation, incident response, and other defensive security topics.
+**Offensive Security · Defensive Security · Digital Forensics · Network Analysis · CTFs · Penetration Testing · Security Tools · Technology**
 
-**Digital Forensics**
-Artifact analysis, evidence examination, timelines, endpoint investigation, and forensic tooling.
-
-**CTFs & Challenges**
-Writeups covering the process of solving challenges, including the reasoning, tools, mistakes, discoveries, and final solution.
-
-**Technology & Experiments**
-Documentation from experimenting with programming languages, frameworks, tools, systems, and other technologies outside of security.
+The topics vary depending on what I was learning, testing, or working on at the time.
 
 ## How I Document
 
-I try to document more than simply **what worked**.
+I try to document more than just the final result.
 
-Whenever possible, my writeups explain:
+Where appropriate, my writeups cover:
 
 * What I was trying to accomplish
-* What I observed
 * How I approached the problem
-* Why I chose a particular technique or tool
-* What worked and what did not
-* Relevant findings and evidence
-* The final solution or conclusion
+* The tools and techniques I used
+* Important observations and findings
+* Approaches that worked or failed
+* How I reached the final result
 * What I learned from the process
 
-Some writeups may be straightforward solutions, while others are more exploratory and document the process of figuring things out.
+The goal is to document the **process behind the result**, rather than simply showing the answer.
 
-The goal is to create a record that is useful both for **future reference and for understanding the reasoning behind the work**.
+## Why This Repository Exists
 
-## Writeup Formats
+This repository serves as a personal technical record of the things I have worked on throughout my cybersecurity and technology learning journey.
 
-Most writeups are maintained in Markdown for easy access through GitHub.
+Some entries are detailed investigations, some are challenge solutions, and others are simply documentation of something I wanted to understand or experiment with.
 
-Selected writeups may also have an HTML version with a more visual presentation:
-
-```text
-Markdown Writeup
-       │
-       ├──→ GitHub
-       │
-       └──→ HTML Version
-              └──→ Visual Presentation
-```
-
-> **Note:** If a writeup appears incomplete or has missing sections on GitHub, please refer to the corresponding original HTML copy in `html_version/posts`.
+Not every writeup follows the same format. The focus is on **learning, experimenting, solving problems, and documenting the experience**.
 
 ## Disclaimer
 
 All security techniques and activities documented in this repository are intended for **authorized labs, CTFs, educational environments, and security research**.
 
-Do not use techniques documented here against systems without proper authorization.
+Do not use the techniques documented here against systems without proper authorization.
 
 ---
 
