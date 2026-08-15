@@ -30,38 +30,13 @@ Note: If a write-up appears incomplete or has missing sections, please refer to 
 This repository is a collection of work from different areas of cybersecurity and technology.
 
 It includes practical labs, CTF writeups, penetration testing work, technical documentation, and other hands-on experiments.
-
-### IT Lab Writeups
-
-Documentation from IT and cybersecurity labs, including the process, findings, and lessons learned from practical exercises.
-
-### Penetration Testing Project
-
-Documentation related to a penetration testing project, including the methodology, testing process, findings, and results.
-
-### Writeups
-
-A collection of writeups covering different challenges, experiments, and areas of cybersecurity and technology.
-
-### HTML Version
-
-Visual HTML versions of selected writeups.
-
-## Areas Covered
-
-The repository isn't focused on only one side of cybersecurity.
-
-Depending on the project or writeup, the content may cover:
-
-**Offensive Security · Defensive Security · Digital Forensics · Network Analysis · CTFs · Penetration Testing · Security Tools · Technology**
-
-The topics vary depending on what I was learning, testing, or working on at the time.
+**Offensive Security · Defensive Security · Cyber range · CTFs · Penetration Testing · Security Tools · Technology**
 
 ## How I Document
 
 I try to document more than just the final result.
 
-Where appropriate, my writeups cover:
+my writeups cover:
 
 * What I was trying to accomplish
 * How I approached the problem
